@@ -1,9 +1,11 @@
 import requests
 import json
+import time
 
 from bs4 import BeautifulSoup
 
 pokemon_db = 'https://pokemondb.net'
+CRAWL_DELAY = 4
 pokemons = []
 
 
@@ -11,7 +13,8 @@ def scrape_pokedex():
     '''Scrapes the pokemondb site for the links to every pokemon entry, it will return all those links in a list best used with the scrape_entry function'''
     link = f"{pokemon_db}/pokedex/all"
     response = requests.get(url=link)
-    response.encoding = 'utf-8'
+    time.sleep(CRAWL_DELAY)
+    # response.encoding = 'utf-8'
     webpage = response.text
 
     soup = BeautifulSoup(webpage, 'html.parser')
@@ -25,7 +28,8 @@ def scrape_entry(link):
     pokedex_entry = f'{pokemon_db}{link}'
 
     response = requests.get(url=pokedex_entry)
-    response.encoding = 'utf-8'
+    time.sleep(CRAWL_DELAY)
+    #response.encoding = 'utf-8'
     webpage = response.text
 
     soup = BeautifulSoup(webpage, 'html.parser')
