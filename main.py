@@ -1,25 +1,36 @@
 import pokedex as pdx
 import json
 
+
+def pokdex_json(pokedex: dict):
+    with open('pokemondb.json', 'w', encoding='utf-8') as file:
+        json_obj = json.dumps(pokedex, indent=4)
+        file.write(json_obj)
+
+
+def pokdex_csv(pokedex: dict):
+    pass
+
+
+def pokdex_sql(pokedex: dict):
+    pass
+
+
 raw_links = pdx.scrape_pokedex()
 
 # Removes Duplicate Links
 links = []
 [links.append(link) for link in raw_links if link not in links]
 
-
-list_length = len(links)
-
-# Appends the dictionary entries to the list and keep track of progress
-for i, link in enumerate(links):
-
-    pdx.pokemons.append(pdx.scrape_entry(link))
-    print(f"{i + 1}/{list_length} Completed")
+pokemons = []
+total = len(links)
+for i, link in enumerate(links[:3]):
+    pokemons.append(pdx.scrape_entry(link))
+    print(f"{i + 1}/{total} Completed")
 
 pokemon_dict = {
-    'data': pdx.pokemons
+    "pokemons": pokemons
 }
 
-with open('pokemondb.json', 'w') as file:
-    json_obj = json.dumps(pokemon_dict, indent=4)
-    file.write(json_obj)
+print(pokemon_dict)
+pokdex_json(pokemon_dict)
