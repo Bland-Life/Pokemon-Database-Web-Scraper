@@ -1,18 +1,22 @@
 import pokedex as pdx
-import json
+import json, csv
 
 
-def pokdex_json(pokedex: dict):
-    with open('pokemondb.json', 'w', encoding='utf-8') as file:
+def pokedex_json(pokedex: dict):
+    with open('pokedex.json', 'w', encoding='utf-8') as file:
         json_obj = json.dumps(pokedex, indent=4)
         file.write(json_obj)
 
 
-def pokdex_csv(pokedex: dict):
-    pass
+def pokedex_csv(pokedex: list):
+    headers = list(pokedex[0].keys())
+    with open('pokedex.csv', mode='w', encoding='UTF8', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(pokedex)
 
 
-def pokdex_sql(pokedex: dict):
+def pokedex_sql(pokedex: dict):
     pass
 
 
@@ -28,9 +32,26 @@ for i, link in enumerate(links[:3]):
     pokemons.append(pdx.scrape_entry(link))
     print(f"{i + 1}/{total} Completed")
 
+"""
+TO SAVE DATA AS A JSON
+
 pokemon_dict = {
     "pokemons": pokemons
 }
 
-print(pokemon_dict)
-pokdex_json(pokemon_dict)
+pokedex_json(pokemon_dict)
+
+
+TO SAVE DATA AS A CSV
+
+pokedex_csv(pokemons)
+"""
+
+pokemon_dict = {
+    "pokemons": pokemons
+}
+
+pokedex_json(pokemon_dict)
+
+
+
