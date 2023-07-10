@@ -15,11 +15,6 @@ def pokedex_csv(pokedex: list):
         writer.writeheader()
         writer.writerows(pokedex)
 
-
-def pokedex_sql(pokedex: dict):
-    pass
-
-
 raw_links = pdx.scrape_pokedex()
 
 # Removes Duplicate Links
@@ -28,12 +23,12 @@ links = []
 
 pokemons = []
 total = len(links)
-for i, link in enumerate(links[:3]):
+for i, link in enumerate(links):
     pokemons.append(pdx.scrape_entry(link))
     print(f"{i + 1}/{total} Completed")
 
-"""
-TO SAVE DATA AS A JSON
+'''
+# TO SAVE DATA AS A JSON
 
 pokemon_dict = {
     "pokemons": pokemons
@@ -42,16 +37,8 @@ pokemon_dict = {
 pokedex_json(pokemon_dict)
 
 
-TO SAVE DATA AS A CSV
+# TO SAVE DATA AS A CSV
 
 pokedex_csv(pokemons)
-"""
-
-pokemon_dict = {
-    "pokemons": pokemons
-}
-
-pokedex_json(pokemon_dict)
-
-
+'''
 
