@@ -1,5 +1,19 @@
 import pokedex as pdx
-import json
+import json, csv
+
+
+def pokedex_json(pokedex: dict):
+    with open('pokedex.json', 'w', encoding='utf-8') as file:
+        json_obj = json.dumps(pokedex, indent=4)
+        file.write(json_obj)
+
+
+def pokedex_csv(pokedex: list):
+    headers = list(pokedex[0].keys())
+    with open('pokedex.csv', mode='w', encoding='UTF8', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(pokedex)
 
 raw_links = pdx.scrape_pokedex()
 
@@ -7,19 +21,24 @@ raw_links = pdx.scrape_pokedex()
 links = []
 [links.append(link) for link in raw_links if link not in links]
 
-
-list_length = len(links)
-
-# Appends the dictionary entries to the list and keep track of progress
+pokemons = []
+total = len(links)
 for i, link in enumerate(links):
+    pokemons.append(pdx.scrape_entry(link))
+    print(f"{i + 1}/{total} Completed")
 
-    pdx.pokemons.append(pdx.scrape_entry(link))
-    print(f"{i + 1}/{list_length} Completed")
+'''
+# TO SAVE DATA AS A JSON
 
 pokemon_dict = {
-    'data': pdx.pokemons
+    "pokemons": pokemons
 }
 
-with open('pokemondb.json', 'w') as file:
-    json_obj = json.dumps(pokemon_dict, indent=4)
-    file.write(json_obj)
+pokedex_json(pokemon_dict)
+
+
+# TO SAVE DATA AS A CSV
+
+pokedex_csv(pokemons)
+'''
+

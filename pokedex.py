@@ -1,36 +1,38 @@
-import requests
-import time
+import requests, time
 from bs4 import BeautifulSoup
 
 pokemon_db = 'https://pokemondb.net'
 CRAWL_DELAY = 4
-pokemons = []
 
 
 def scrape_pokedex():
-    '''Scrapes the pokemondb site for the links to every pokemon entry, it will return all those links in a list best used with the scrape_entry function'''
+    """
+    Scrapes the pokemondb site for the routes to every pokemon entry, it will return all those routes in a list.
+    """
+
     link = f"{pokemon_db}/pokedex/all"
     response = requests.get(url=link)
     time.sleep(CRAWL_DELAY)
-    # response.encoding = 'utf-8'
     webpage = response.text
-
     soup = BeautifulSoup(webpage, 'html.parser')
     return [link['href'] for link in soup.select(".ent-name")]
 
 
-def scrape_entry(link):
-    '''Takes a link to a pokedex entry page, such as https://pokemondb.net/pokedex/bulbasaur. The information that is obtained from the page will
-    be added to a dictionary which will be returned.'''
+def scrape_entry(link: str):
+    """
+    Takes a route to a pokedex entry page and scrapes for basic information.
+
+    It uses the routes obtained from the scrape_pokedex method e.g. '/pokedex/bulbasaur' and will combine it with the main site link to request the web page.
+    Afterwards, it will obtain basic information like the pokemon name, typing, evolution, etc. and return it in a dictionary.
+    """
     
     pokedex_entry = f'{pokemon_db}{link}'
 
     response = requests.get(url=pokedex_entry)
     time.sleep(CRAWL_DELAY)
-    #response.encoding = 'utf-8'
     webpage = response.text
+    soup = BeautifulSoup(webpage.encode('utf-8'), 'html.parser')
 
-    soup = BeautifulSoup(webpage, 'html.parser')
     pokemon_name = None
     id = None
     species = None
@@ -46,27 +48,27 @@ def scrape_entry(link):
     img = soup.select_one('main picture img')['src']
 
 
-    # Scans each row within the table that contains most of the pokemon data.
+    # The first table found contains most of the data, so this is just scanning each row of that table.
     table = soup.select_one('.vitals-table')
     rows = table.find_all('tr')
     for row in rows:
-        if row.find('th').text == 'Type':
-            types = [type.text for type in row.find_all('a')]
-
+        if row.find('th').text == 'National №':
+            id = row.find('td').text
+        
         if row.find('th').text == 'Species':
             species = row.find('td').text
 
-        if row.find('th').text == 'Weight':
-            weight = row.find('td').text
+        if row.find('th').text == 'Type':
+            types = [type.text for type in row.find_all('a')]
         
         if row.find('th').text == 'Height':
-            height = row.find('td').text
+            height = row.find('td').text.replace(u'\xa0', u' ')
 
+        if row.find('th').text == 'Weight':
+            weight = row.find('td').text.replace(u'\xa0', u' ')
+        
         if row.find('th').text == 'Abilities':
-            abilities = [type.text for type in row.find_all('a')]
-
-        if row.find('th').text == 'National №':
-            id = row.find('td').text
+            abilities = [type.text for type in row.find_all('a')]        
     
     evolutions = [link.text for link in soup.select('#dex-evolution + h2 + div .ent-name')]
     entry_info = soup.select_one('#dex-flavor + h2 + div td')
@@ -82,7 +84,7 @@ def scrape_entry(link):
         entry_info = entry_info.text
 
     new_entry = {
-        'id': id,
+        'id': int(id),
         'name': pokemon_name,
         'species': species,
         'types': types,
