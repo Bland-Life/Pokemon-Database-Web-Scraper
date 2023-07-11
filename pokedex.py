@@ -5,11 +5,15 @@ pokemon_db = 'https://pokemondb.net'
 CRAWL_DELAY = 4
 
 
-def scrape_pokedex():
+def scrape_pokedex() -> list[str]:
     """
     Scrapes the pokemondb site for the routes to every pokemon entry, it will return all those routes in a list.
     """
 
+    pokemon: str = input('Enter a Pokemon name or ID (leave empty to scrape all): ')
+    if pokemon:
+        return [f'/pokedex/{pokemon}']
+    
     link = f"{pokemon_db}/pokedex/all"
     response = requests.get(url=link)
     time.sleep(CRAWL_DELAY)
