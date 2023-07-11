@@ -74,9 +74,13 @@ def scrape_entry(link: str):
         if row.find('th').text == 'Abilities':
             abilities = [type.text for type in row.find_all('a')]        
     
-    evolutions = [link.text for link in soup.select('#dex-evolution + h2 + div .ent-name')]
+    evolution_paths = soup.find_all(class_='infocard-list-evo')
+    evolutions: list = []
+    for path in evolution_paths:
+        evolutions.extend(link.text for link in path.select(f'.ent-name') if link.text not in evolutions)
+
     entry_info = soup.select_one('#dex-flavor + h2 + div td')
-    
+
     # If there isn't an entry stored, some pages have a slightly altered format
     if not entry_info:
         entry_info = soup.select_one('#dex-flavor + h2 + h3 + div td')
