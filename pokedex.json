@@ -556,7 +556,6 @@
             "evolutions": [
                 "Pichu",
                 "Pikachu",
-                "Raichu",
                 "Raichu"
             ],
             "facts": "When several of these POK\u00e9MON gather, their electricity could build and cause lightning storms.",
@@ -579,7 +578,6 @@
             "evolutions": [
                 "Pichu",
                 "Pikachu",
-                "Raichu",
                 "Raichu"
             ],
             "facts": "Its long tail serves as a ground to protect itself from its own high voltage power.",
@@ -1174,7 +1172,8 @@
             ],
             "evolutions": [
                 "Meowth",
-                "Persian"
+                "Persian",
+                "Perrserker"
             ],
             "facts": "Adores circular objects. Wanders the streets on a nightly basis to look for dropped loose change.",
             "site_link": "https://pokemondb.net/pokedex/meowth",
@@ -1196,7 +1195,8 @@
             ],
             "evolutions": [
                 "Meowth",
-                "Persian"
+                "Persian",
+                "Perrserker"
             ],
             "facts": "Although its fur has many admirers, it is tough to raise as a pet because of its fickle meanness.",
             "site_link": "https://pokemondb.net/pokedex/persian",
@@ -2314,7 +2314,6 @@
             ],
             "evolutions": [
                 "Exeggcute",
-                "Exeggutor",
                 "Exeggutor"
             ],
             "facts": "Often mistaken for eggs. When disturbed, they quickly gather and attack in swarms.",
@@ -2337,7 +2336,6 @@
             ],
             "evolutions": [
                 "Exeggcute",
-                "Exeggutor",
                 "Exeggutor"
             ],
             "facts": "Legend has it that on rare occasions, one of its heads will drop off and continue on as an EXEGGCUTE.",
@@ -2360,7 +2358,6 @@
             ],
             "evolutions": [
                 "Cubone",
-                "Marowak",
                 "Marowak"
             ],
             "facts": "Because it never removes its skull helmet, no one has ever seen this POK\u00e9MON\u2019s real face.",
@@ -2383,7 +2380,6 @@
             ],
             "evolutions": [
                 "Cubone",
-                "Marowak",
                 "Marowak"
             ],
             "facts": "The bone it holds is its key weapon. It throws the bone skillfully like a boomerang to KO targets.",
@@ -2476,7 +2472,6 @@
             ],
             "evolutions": [
                 "Koffing",
-                "Weezing",
                 "Weezing"
             ],
             "facts": "Because it stores several kinds of toxic gases in its body, it is prone to exploding without warning.",
@@ -2499,7 +2494,6 @@
             ],
             "evolutions": [
                 "Koffing",
-                "Weezing",
                 "Weezing"
             ],
             "facts": "Where two kinds of poison gases meet, 2 KOFFINGs can fuse into a WEEZING over many years.",
@@ -2771,7 +2765,6 @@
             "evolutions": [
                 "Mime Jr.",
                 "Mr. Mime",
-                "Mr. Mime",
                 "Mr. Rime"
             ],
             "facts": "If interrupted while it is miming, it will slap around the offender with its broad hands.",
@@ -3006,7 +2999,12 @@
                 "Eevee",
                 "Vaporeon",
                 "Jolteon",
-                "Flareon"
+                "Flareon",
+                "Espeon",
+                "Umbreon",
+                "Leafeon",
+                "Glaceon",
+                "Sylveon"
             ],
             "facts": "Its genetic code is irregular. It may mutate if it is exposed to radiation from element STONEs.",
             "site_link": "https://pokemondb.net/pokedex/eevee",
@@ -3029,7 +3027,12 @@
                 "Eevee",
                 "Vaporeon",
                 "Jolteon",
-                "Flareon"
+                "Flareon",
+                "Espeon",
+                "Umbreon",
+                "Leafeon",
+                "Glaceon",
+                "Sylveon"
             ],
             "facts": "Lives close to water. Its long tail is ridged with a fin which is often mistaken for a mermaid\u2019s.",
             "site_link": "https://pokemondb.net/pokedex/vaporeon",
@@ -3052,7 +3055,12 @@
                 "Eevee",
                 "Vaporeon",
                 "Jolteon",
-                "Flareon"
+                "Flareon",
+                "Espeon",
+                "Umbreon",
+                "Leafeon",
+                "Glaceon",
+                "Sylveon"
             ],
             "facts": "It accumulates negative ions in the atmosphere to blast out 10000-volt lightning bolts.",
             "site_link": "https://pokemondb.net/pokedex/jolteon",
@@ -3075,7 +3083,12 @@
                 "Eevee",
                 "Vaporeon",
                 "Jolteon",
-                "Flareon"
+                "Flareon",
+                "Espeon",
+                "Umbreon",
+                "Leafeon",
+                "Glaceon",
+                "Sylveon"
             ],
             "facts": "When storing thermal energy in its body, its temperature could soar to over 1600 degrees.",
             "site_link": "https://pokemondb.net/pokedex/flareon",
@@ -3479,7 +3492,6 @@
             "evolutions": [
                 "Cyndaquil",
                 "Quilava",
-                "Typhlosion",
                 "Typhlosion"
             ],
             "facts": "It is timid, and always curls itself up in a ball. If attacked, it flares up its back for protection.",
@@ -3502,7 +3514,6 @@
             "evolutions": [
                 "Cyndaquil",
                 "Quilava",
-                "Typhlosion",
                 "Typhlosion"
             ],
             "facts": "Be careful if it turns its back during battle. It means that it will attack with the fire on its back.",
@@ -3525,7 +3536,6 @@
             "evolutions": [
                 "Cyndaquil",
                 "Quilava",
-                "Typhlosion",
                 "Typhlosion"
             ],
             "facts": "If its rage peaks, it becomes so hot that anything that touches it will instantly go up in flames.",
@@ -3865,7 +3875,6 @@
             "evolutions": [
                 "Pichu",
                 "Pikachu",
-                "Raichu",
                 "Raichu"
             ],
             "facts": "It is not yet skilled at storing electricity. It may send out a jolt if amused or startled.",
@@ -4373,7 +4382,8 @@
             ],
             "evolutions": [
                 "Wooper",
-                "Quagsire"
+                "Quagsire",
+                "Clodsire"
             ],
             "facts": "This POK\u00e9MON lives in cold water. It will leave the water to search for food when it gets cold outside.",
             "site_link": "https://pokemondb.net/pokedex/wooper",
@@ -4396,7 +4406,8 @@
             ],
             "evolutions": [
                 "Wooper",
-                "Quagsire"
+                "Quagsire",
+                "Clodsire"
             ],
             "facts": "This carefree POK\u00e9MON has an easy-going nature. While swimming, it always bumps into boat hulls.",
             "site_link": "https://pokemondb.net/pokedex/quagsire",
@@ -4419,7 +4430,12 @@
                 "Eevee",
                 "Vaporeon",
                 "Jolteon",
-                "Flareon"
+                "Flareon",
+                "Espeon",
+                "Umbreon",
+                "Leafeon",
+                "Glaceon",
+                "Sylveon"
             ],
             "facts": "It uses the fine hair that covers its body to sense air currents and predict its enemy\u2019s actions.",
             "site_link": "https://pokemondb.net/pokedex/espeon",
@@ -4442,7 +4458,12 @@
                 "Eevee",
                 "Vaporeon",
                 "Jolteon",
-                "Flareon"
+                "Flareon",
+                "Espeon",
+                "Umbreon",
+                "Leafeon",
+                "Glaceon",
+                "Sylveon"
             ],
             "facts": "When agitated, this POK\u00e9MON protects itself by spraying poisonous sweat from its pores.",
             "site_link": "https://pokemondb.net/pokedex/umbreon",
@@ -4635,7 +4656,6 @@
             ],
             "evolutions": [
                 "Dunsparce",
-                "Dudunsparce",
                 "Dudunsparce"
             ],
             "facts": "When spotted, this POK\u00e9MON escapes backward by furiously boring into the ground with its tail.",
@@ -4836,7 +4856,8 @@
             ],
             "evolutions": [
                 "Sneasel",
-                "Weavile"
+                "Weavile",
+                "Sneasler"
             ],
             "facts": "Its paws conceal sharp claws. If attacked, it suddenly extends the claws and startles its enemy.",
             "site_link": "https://pokemondb.net/pokedex/sneasel",
@@ -5884,7 +5905,8 @@
             ],
             "evolutions": [
                 "Zigzagoon",
-                "Linoone"
+                "Linoone",
+                "Obstagoon"
             ],
             "facts": "ZIGZAGOON restlessly wanders everywhere at all times. This POK\u00e9MON does so because it is very curious. It becomes interested in anything that it happens to see.",
             "site_link": "https://pokemondb.net/pokedex/zigzagoon",
@@ -5906,7 +5928,8 @@
             ],
             "evolutions": [
                 "Zigzagoon",
-                "Linoone"
+                "Linoone",
+                "Obstagoon"
             ],
             "facts": "LINOONE always runs full speed and only in straight lines. If facing an obstacle, it makes a right-angle turn to evade it. This POK\u00e9MON is very challenged by gently curving roads.",
             "site_link": "https://pokemondb.net/pokedex/linoone",
@@ -6509,7 +6532,6 @@
             "evolutions": [
                 "Nincada",
                 "Ninjask",
-                "Ninjask",
                 "Shedinja"
             ],
             "facts": "NINCADA lives underground for many years in complete darkness. This POK\u00e9MON absorbs nutrients from the roots of trees. It stays motionless as it waits for evolution.",
@@ -6533,7 +6555,6 @@
             "evolutions": [
                 "Nincada",
                 "Ninjask",
-                "Ninjask",
                 "Shedinja"
             ],
             "facts": "NINJASK moves around at such a high speed that it cannot be seen, even while its crying can be clearly heard. For that reason, this POK\u00e9MON was long believed to be invisible.",
@@ -6555,7 +6576,6 @@
             ],
             "evolutions": [
                 "Nincada",
-                "Ninjask",
                 "Ninjask",
                 "Shedinja"
             ],
@@ -9126,7 +9146,8 @@
             ],
             "evolutions": [
                 "Burmy",
-                "Mothim"
+                "Mothim",
+                "Wormadam"
             ],
             "facts": "To shelter itself from cold, wintry winds, it covers itself with a cloak made of twigs and leaves.",
             "site_link": "https://pokemondb.net/pokedex/burmy",
@@ -9148,7 +9169,8 @@
             ],
             "evolutions": [
                 "Burmy",
-                "Mothim"
+                "Mothim",
+                "Wormadam"
             ],
             "facts": "When BURMY evolved, its cloak became a part of this Pok\u00e9mon\u2019s body. The cloak is never shed.",
             "site_link": "https://pokemondb.net/pokedex/wormadam",
@@ -9170,7 +9192,8 @@
             ],
             "evolutions": [
                 "Burmy",
-                "Mothim"
+                "Mothim",
+                "Wormadam"
             ],
             "facts": "It loves the honey of flowers and steals honey collected by COMBEE.",
             "site_link": "https://pokemondb.net/pokedex/mothim",
@@ -9717,7 +9740,6 @@
             "evolutions": [
                 "Mime Jr.",
                 "Mr. Mime",
-                "Mr. Mime",
                 "Mr. Rime"
             ],
             "facts": "It habitually mimics foes. Once mimicked, the foe cannot take its eyes off this Pok\u00e9mon.",
@@ -10200,7 +10222,8 @@
             ],
             "evolutions": [
                 "Sneasel",
-                "Weavile"
+                "Weavile",
+                "Sneasler"
             ],
             "facts": "They live in cold regions, forming groups of four or five that hunt prey with impressive coordination.",
             "site_link": "https://pokemondb.net/pokedex/weavile",
@@ -10406,7 +10429,12 @@
                 "Eevee",
                 "Vaporeon",
                 "Jolteon",
-                "Flareon"
+                "Flareon",
+                "Espeon",
+                "Umbreon",
+                "Leafeon",
+                "Glaceon",
+                "Sylveon"
             ],
             "facts": "Just like a plant, it uses photosynthesis. As a result, it is always enveloped in clear air.",
             "site_link": "https://pokemondb.net/pokedex/leafeon",
@@ -10429,7 +10457,12 @@
                 "Eevee",
                 "Vaporeon",
                 "Jolteon",
-                "Flareon"
+                "Flareon",
+                "Espeon",
+                "Umbreon",
+                "Leafeon",
+                "Glaceon",
+                "Sylveon"
             ],
             "facts": "As a protective technique, it can completely freeze its fur to make its hairs stand like needles.",
             "site_link": "https://pokemondb.net/pokedex/glaceon",
@@ -11030,7 +11063,6 @@
             "evolutions": [
                 "Oshawott",
                 "Dewott",
-                "Samurott",
                 "Samurott"
             ],
             "facts": "It fights using the scalchop on its stomach. In response to an attack, it retaliates immediately by slashing.",
@@ -11053,7 +11085,6 @@
             "evolutions": [
                 "Oshawott",
                 "Dewott",
-                "Samurott",
                 "Samurott"
             ],
             "facts": "Strict training is how it learns its flowing double-scalchop technique.",
@@ -11076,7 +11107,6 @@
             "evolutions": [
                 "Oshawott",
                 "Dewott",
-                "Samurott",
                 "Samurott"
             ],
             "facts": "One swing of the sword incorporated in its armor can fell an opponent. A simple glare from one of them quiets everybody.",
@@ -12089,7 +12119,6 @@
             ],
             "evolutions": [
                 "Petilil",
-                "Lilligant",
                 "Lilligant"
             ],
             "facts": "The leaves on its head are very bitter. Eating one of these leaves is known to refresh a tired body.",
@@ -12112,7 +12141,6 @@
             ],
             "evolutions": [
                 "Petilil",
-                "Lilligant",
                 "Lilligant"
             ],
             "facts": "Even veteran Trainers face a challenge in getting its beautiful flower to bloom. This Pok\u00e9mon is popular with celebrities.",
@@ -12135,7 +12163,6 @@
             ],
             "evolutions": [
                 "Basculin",
-                "Basculegion",
                 "Basculegion"
             ],
             "facts": "Red and blue Basculin get along so poorly, they\u2019ll start fighting instantly. These Pok\u00e9mon are very hostile.",
@@ -12401,7 +12428,8 @@
             ],
             "evolutions": [
                 "Yamask",
-                "Cofagrigus"
+                "Cofagrigus",
+                "Runerigus"
             ],
             "facts": "Each of them carries a mask that used to be its face when it was human. Sometimes they look at it and cry.",
             "site_link": "https://pokemondb.net/pokedex/yamask",
@@ -12421,7 +12449,8 @@
             ],
             "evolutions": [
                 "Yamask",
-                "Cofagrigus"
+                "Cofagrigus",
+                "Runerigus"
             ],
             "facts": "It has been said that they swallow those who get too close and turn them into mummies. They like to eat gold nuggets.",
             "site_link": "https://pokemondb.net/pokedex/cofagrigus",
@@ -13839,7 +13868,6 @@
             ],
             "evolutions": [
                 "Rufflet",
-                "Braviary",
                 "Braviary"
             ],
             "facts": "They crush berries with their talons. They bravely stand up to any opponent, no matter how strong it is.",
@@ -13863,7 +13891,6 @@
             ],
             "evolutions": [
                 "Rufflet",
-                "Braviary",
                 "Braviary"
             ],
             "facts": "They fight for their friends without any thought about danger to themselves. One can carry a car while flying.",
@@ -14899,7 +14926,6 @@
             ],
             "evolutions": [
                 "Espurr",
-                "Meowstic",
                 "Meowstic"
             ],
             "facts": "The organ that emits its intense psychic power is sheltered by its ears to keep power from leaking out.",
@@ -14922,7 +14948,6 @@
             ],
             "evolutions": [
                 "Espurr",
-                "Meowstic",
                 "Meowstic"
             ],
             "facts": "When in danger, it raises its ears and releases enough psychic power to grind a 10-ton truck into dust.",
@@ -15408,7 +15433,12 @@
                 "Eevee",
                 "Vaporeon",
                 "Jolteon",
-                "Flareon"
+                "Flareon",
+                "Espeon",
+                "Umbreon",
+                "Leafeon",
+                "Glaceon",
+                "Sylveon"
             ],
             "facts": "It sends a soothing aura from its ribbonlike feelers to calm fights.",
             "site_link": "https://pokemondb.net/pokedex/sylveon",
@@ -15490,8 +15520,6 @@
             "evolutions": [
                 "Goomy",
                 "Sliggoo",
-                "Goodra",
-                "Sliggoo",
                 "Goodra"
             ],
             "facts": "The weakest Dragon-type Pok\u00e9mon, it lives in damp, shady places, so its body doesn\u2019t dry out.",
@@ -15515,8 +15543,6 @@
             "evolutions": [
                 "Goomy",
                 "Sliggoo",
-                "Goodra",
-                "Sliggoo",
                 "Goodra"
             ],
             "facts": "It drives away opponents by excreting a sticky liquid that can dissolve anything. Its eyes devolved, so it can\u2019t see anything.",
@@ -15539,8 +15565,6 @@
             ],
             "evolutions": [
                 "Goomy",
-                "Sliggoo",
-                "Goodra",
                 "Sliggoo",
                 "Goodra"
             ],
@@ -15675,7 +15699,6 @@
             ],
             "evolutions": [
                 "Bergmite",
-                "Avalugg",
                 "Avalugg"
             ],
             "facts": "It blocks opponents\u2019 attacks with the ice that shields its body. It uses cold air to repair any cracks with new ice.",
@@ -15698,7 +15721,6 @@
             ],
             "evolutions": [
                 "Bergmite",
-                "Avalugg",
                 "Avalugg"
             ],
             "facts": "Its ice-covered body is as hard as steel. Its cumbersome frame crushes anything that stands in its way.",
@@ -15876,7 +15898,6 @@
             "evolutions": [
                 "Rowlet",
                 "Dartrix",
-                "Decidueye",
                 "Decidueye"
             ],
             "facts": "This wary Pok\u00e9mon uses photosynthesis to store up energy during the day, while becoming active at night.",
@@ -15900,7 +15921,6 @@
             "evolutions": [
                 "Rowlet",
                 "Dartrix",
-                "Decidueye",
                 "Decidueye"
             ],
             "facts": "A bit of a dandy, it spends its free time preening its wings. Its preoccupation with any dirt on its plumage can leave it unable to battle.",
@@ -15924,7 +15944,6 @@
             "evolutions": [
                 "Rowlet",
                 "Dartrix",
-                "Decidueye",
                 "Decidueye"
             ],
             "facts": "It fires arrow quills from its wings with such precision, they can pierce a pebble at distances over a hundred yards.",
@@ -16371,7 +16390,6 @@
             ],
             "evolutions": [
                 "Rockruff",
-                "Lycanroc",
                 "Lycanroc"
             ],
             "facts": "It\u2019s considered to be a good Pok\u00e9mon for beginners because of its friendliness, but its disposition grows rougher as it grows up.",
@@ -16394,7 +16412,6 @@
             ],
             "evolutions": [
                 "Rockruff",
-                "Lycanroc",
                 "Lycanroc"
             ],
             "facts": "Its quick movements confuse its enemies. Well equipped with claws and fangs, it also uses the sharp rocks in its mane as weapons.",
@@ -18562,7 +18579,6 @@
             ],
             "evolutions": [
                 "Toxel",
-                "Toxtricity",
                 "Toxtricity"
             ],
             "facts": "It stores poison in an internal poison sac and secretes that poison through its skin. If you touch this Pok\u00e9mon, a tingling sensation follows.",
@@ -18586,7 +18602,6 @@
             ],
             "evolutions": [
                 "Toxel",
-                "Toxtricity",
                 "Toxtricity"
             ],
             "facts": "When this Pok\u00e9mon sounds as if it\u2019s strumming a guitar, it\u2019s actually clawing at the protrusions on its chest to generate electricity.",
@@ -18882,7 +18897,8 @@
             ],
             "evolutions": [
                 "Zigzagoon",
-                "Linoone"
+                "Linoone",
+                "Obstagoon"
             ],
             "facts": "Its voice is staggering in volume. Obstagoon has a tendency to take on a threatening posture and shout\u2014this move is known as Obstruct.",
             "site_link": "https://pokemondb.net/pokedex/obstagoon",
@@ -18904,7 +18920,8 @@
             ],
             "evolutions": [
                 "Meowth",
-                "Persian"
+                "Persian",
+                "Perrserker"
             ],
             "facts": "What appears to be an iron helmet is actually hardened hair. This Pok\u00e9mon lives for the thrill of battle.",
             "site_link": "https://pokemondb.net/pokedex/perrserker",
@@ -18970,7 +18987,6 @@
             "evolutions": [
                 "Mime Jr.",
                 "Mr. Mime",
-                "Mr. Mime",
                 "Mr. Rime"
             ],
             "facts": "It\u2019s highly skilled at tap-dancing. It waves its cane of ice in time with its graceful movements.",
@@ -18992,7 +19008,8 @@
             ],
             "evolutions": [
                 "Yamask",
-                "Cofagrigus"
+                "Cofagrigus",
+                "Runerigus"
             ],
             "facts": "A powerful curse was woven into an ancient painting. After absorbing the spirit of a Yamask, the painting began to move.",
             "site_link": "https://pokemondb.net/pokedex/runerigus",
@@ -19472,7 +19489,6 @@
             ],
             "evolutions": [
                 "Kubfu",
-                "Urshifu",
                 "Urshifu"
             ],
             "facts": "Kubfu trains hard to perfect its moves. The moves it masters will determine which form it takes when it evolves.",
@@ -19494,7 +19510,6 @@
             ],
             "evolutions": [
                 "Kubfu",
-                "Urshifu",
                 "Urshifu"
             ],
             "facts": "People call it the embodiment of rage. It\u2019s said that this Pok\u00e9mon\u2019s terrifying expression and shout will rid the world of malevolence.",
@@ -19693,7 +19708,6 @@
             ],
             "evolutions": [
                 "Basculin",
-                "Basculegion",
                 "Basculegion"
             ],
             "facts": "Clads itself in the souls of comrades that perished before fulfilling their goals of journeying upstream. No other species throughout all Hisui\u2019s rivers is Basculegion\u2019s equal.",
@@ -19717,7 +19731,8 @@
             ],
             "evolutions": [
                 "Sneasel",
-                "Weavile"
+                "Weavile",
+                "Sneasler"
             ],
             "facts": "Because of Sneasler\u2019s virulent poison and daunting physical prowess, no other species could hope to best it on the frozen highlands. Preferring solitude, this species does not form packs.",
             "site_link": "https://pokemondb.net/pokedex/sneasler",
@@ -19982,7 +19997,6 @@
             ],
             "evolutions": [
                 "Lechonk",
-                "Oinkologne",
                 "Oinkologne"
             ],
             "facts": "It searches for food all day. It possesses a keen sense of smell but doesn\u2019t use it for anything other than foraging.",
@@ -20005,7 +20019,6 @@
             ],
             "evolutions": [
                 "Lechonk",
-                "Oinkologne",
                 "Oinkologne"
             ],
             "facts": "Oinkologne is proud of its fine, glossy skin. It emits a concentrated scent from the tip of its tail.",
@@ -20184,7 +20197,6 @@
             ],
             "evolutions": [
                 "Tandemaus",
-                "Maushold",
                 "Maushold"
             ],
             "facts": "Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them.",
@@ -20207,7 +20219,6 @@
             ],
             "evolutions": [
                 "Tandemaus",
-                "Maushold",
                 "Maushold"
             ],
             "facts": "The two little ones just appeared one day. The group might be a family of related Pok\u00e9mon, but nobody knows for sure.",
@@ -21404,7 +21415,8 @@
             ],
             "evolutions": [
                 "Wooper",
-                "Quagsire"
+                "Quagsire",
+                "Clodsire"
             ],
             "facts": "When attacked, this Pok\u00e9mon will retaliate by sticking thick spines out from its body. It\u2019s a risky move that puts everything on the line.",
             "site_link": "https://pokemondb.net/pokedex/clodsire",
@@ -21449,7 +21461,6 @@
             ],
             "evolutions": [
                 "Dunsparce",
-                "Dudunsparce",
                 "Dudunsparce"
             ],
             "facts": "This Pok\u00e9mon uses its hard tail to make its nest by boring holes into bedrock deep underground. The nest can reach lengths of over six miles.",
