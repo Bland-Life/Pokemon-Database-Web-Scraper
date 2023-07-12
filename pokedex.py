@@ -11,7 +11,9 @@ def scrape_pokedex() -> list[str]:
     """
 
     pokemon: str = input('Enter a Pokemon name or ID (leave empty to scrape all): ')
+    
     if pokemon:
+        pokemon = pokemon.replace(" ", "-").replace(".", "")
         return [f'/pokedex/{pokemon}']
     
     link = f"{pokemon_db}/pokedex/all"
