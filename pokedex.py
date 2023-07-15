@@ -75,8 +75,8 @@ def scrape_entry(link: str):
         
         if row.find('th').text == 'Abilities':
             abilities = {
-                'normal': [type.text for type in row.find_all('span')],
-                'hidden':  [type.text for type in row.find_all('small')]
+                'normal': [type.text[3:] for type in row.find_all('span')],
+                'hidden':  [type.text.replace(' (hidden ability)', '') for type in row.find_all('small')]
             }
     
     evolution_paths = soup.find_all(class_='infocard-list-evo')
