@@ -74,7 +74,10 @@ def scrape_entry(link: str):
             weight = row.find('td').text.replace(u'\xa0', u' ')
         
         if row.find('th').text == 'Abilities':
-            abilities = [type.text for type in row.find_all('a')]        
+            abilities = {
+                'normal': [type.text for type in row.find_all('span')],
+                'hidden':  [type.text for type in row.find_all('small')]
+            }
     
     evolution_paths = soup.find_all(class_='infocard-list-evo')
     evolutions: list = []
