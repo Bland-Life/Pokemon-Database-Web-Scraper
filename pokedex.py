@@ -1,5 +1,6 @@
 import requests, time
 from bs4 import BeautifulSoup
+from pokemon import Pokemon
 
 pokemon_db = 'https://pokemondb.net'
 CRAWL_DELAY = 4
@@ -38,20 +39,10 @@ def scrape_entry(link: str):
     time.sleep(CRAWL_DELAY)
     webpage = response.text
     soup = BeautifulSoup(webpage.encode('utf-8'), 'html.parser')
+    pokemon = Pokemon()
 
-    pokemon_name = None
-    id = None
-    species = None
-    types = None
-    height = None
-    weight = None
-    abilities = None
-    evolutions = None
-    entry_info = None
-    img = None
-    
-    pokemon_name = soup.find('h1').text
-    img = soup.select_one('main picture img')['src']
+    pokemon.name = soup.find('h1').text
+    pokemon.img_ref = soup.select_one('main picture img')['src']
 
 
     # The first table found contains most of the data, so this is just scanning each row of that table.
@@ -59,54 +50,41 @@ def scrape_entry(link: str):
     rows = table.find_all('tr')
     for row in rows:
         if row.find('th').text == 'National №':
-            id = row.find('td').text
+            pokemon.id = row.find('td').text
         
         if row.find('th').text == 'Species':
-            species = row.find('td').text
+            pokemon.species = row.find('td').text
 
         if row.find('th').text == 'Type':
-            types = [type.text for type in row.find_all('a')]
+            pokemon.types = [type.text for type in row.find_all('a')]
         
         if row.find('th').text == 'Height':
-            height = row.find('td').text.replace(u'\xa0', u' ')
+            pokemon.height = row.find('td').text.replace(u'\xa0', u' ')
 
         if row.find('th').text == 'Weight':
-            weight = row.find('td').text.replace(u'\xa0', u' ')
+            pokemon.weight = row.find('td').text.replace(u'\xa0', u' ')
         
         if row.find('th').text == 'Abilities':
-            abilities = {
+            pokemon.abilities = {
                 'normal': [type.text[3:] for type in row.find_all('span')],
                 'hidden':  [type.text.replace(' (hidden ability)', '') for type in row.find_all('small')]
             }
     
     evolution_paths = soup.find_all(class_='infocard-list-evo')
-    evolutions: list = []
+    pokemon.evolutions: list = []
     for path in evolution_paths:
-        evolutions.extend(link.text for link in path.select(f'.ent-name') if link.text not in evolutions)
+        pokemon.evolutions.extend(link.text for link in path.select(f'.ent-name') if link.text not in pokemon.evolutions)
 
-    entry_info = soup.select_one('#dex-flavor + h2 + div td')
+    pokemon.entry_info = soup.select_one('#dex-flavor + h2 + div td')
 
     # If there isn't an entry stored, some pages have a slightly altered format
-    if not entry_info:
-        entry_info = soup.select_one('#dex-flavor + h2 + h3 + div td')
+    if not pokemon.entry_info:
+        pokemon.entry_info = soup.select_one('#dex-flavor + h2 + h3 + div td')
 
     # If there STILL isn't an entry stored, there probably isn't one on the page
-    if not entry_info:
-        entry_info = 'No Entry'
+    if not pokemon.entry_info:
+        pokemon.entry_info = 'No Entry'
     else:
-        entry_info = entry_info.text
+        pokemon.entry_info = pokemon.entry_info.text
 
-    new_entry = {
-        'id': int(id),
-        'name': pokemon_name,
-        'species': species,
-        'types': types,
-        'height': height,
-        'weight': weight,
-        'abilities': abilities,
-        'evolutions': evolutions,
-        'facts': entry_info,
-        'site_link': pokedex_entry,
-        'img_link': img
-    }
-    return new_entry
+    return pokemon.__dict__
